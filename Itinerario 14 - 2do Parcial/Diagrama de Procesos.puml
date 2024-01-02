@@ -1,0 +1,15 @@
+@startuml ChatGPT
+
+title Ejemplo de diagrama de procesos
+
+start
+:Inicio del proyecto;
+:Planificación;
+:Ejecución;
+:Seguimiento y control;
+:Cierre;
+stop
+
+footer El diagrama de procesos ofrece una visión general de alto nivel\nde las etapas y las interacciones principales en un proceso.
+
+@enduml

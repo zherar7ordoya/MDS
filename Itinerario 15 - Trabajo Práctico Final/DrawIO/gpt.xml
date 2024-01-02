@@ -1,0 +1,43 @@
+<diagram name="Transporte de Cargas" xmlns="http://schemas.microsoft.com/visio/2003/uml">
+  <mxGraphModel dx="1390" dy="650" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <root>
+      <mxCell id="0" />
+      <mxCell id="1" parent="0" />
+    </root>
+    <mxCell id="2" value="" style="group" vertex="1" connectable="0">
+      <mxGeometry x="50" y="50" width="700" height="500" as="geometry" />
+    </mxCell>
+    
+    <!-- Evento de Inicio -->
+    <mxCell id="3" value="Inicio del Proceso" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+      <mxGeometry x="100" y="100" width="80" height="40" as="geometry" />
+    </mxCell>
+    
+    <!-- Tarea de Planificación de Ruta -->
+    <mxCell id="4" value="Planificación de Ruta" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+      <mxGeometry x="300" y="100" width="120" height="60" as="geometry" />
+    </mxCell>
+    
+    <!-- Gateway de Decisión -->
+    <mxCell id="5" value="Decisión de Transporte" style="rhombus;whiteSpace=wrap;html=1;" vertex="1">
+      <mxGeometry x="530" y="100" width="60" height="60" as="geometry" />
+    </mxCell>
+    
+    <!-- Tarea de Asignación de Vehículo y Conductor -->
+    <mxCell id="6" value="Asignación de Vehículo y Conductor" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+      <mxGeometry x="180" y="250" width="180" height="80" as="geometry" />
+    </mxCell>
+    
+    <!-- Tarea de Reserva de Espacio en Aerolínea -->
+    <mxCell id="7" value="Reserva de Espacio en Aerolínea" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+      <mxGeometry x="450" y="250" width="180" height="80" as="geometry" />
+    </mxCell>
+    
+    <!-- Tarea de Confirmación del Usuario -->
+    <mxCell id="8" value="Confirmación del Usuario" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+      <mxGeometry x="300" y="400" width="120" height="60" as="geometry" />
+    </mxCell>
+    
+    <!-- Evento de Fin -->
+    <mxCell id="9" value="Fin del Proceso" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1">
+      <mxGeometry x="100" y="500" width="80" height="40" as="geometry" />

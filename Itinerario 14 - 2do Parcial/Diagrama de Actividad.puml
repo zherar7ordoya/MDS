@@ -1,0 +1,19 @@
+@startuml ChatGPT
+
+title Ejemplo de diagrama de actividad
+
+start
+:Buscar disponibilidad de habitaciones;
+if (Habitaciones disponibles?) then (Sí)
+  :Seleccionar habitación;
+else (No)
+  stop
+endif
+:Ingresar datos del cliente;
+:Realizar pago;
+:Enviar confirmación;
+stop
+
+footer El diagrama de actividad se centra en el flujo de\ncontrol detallado y las actividades específicas.
+
+@enduml

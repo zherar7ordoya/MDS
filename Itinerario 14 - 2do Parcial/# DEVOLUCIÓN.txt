@@ -1,0 +1,13 @@
+Leonel Jiménez Gamboa: No desarrollaste el Diagrama de Secuencia con las clases involucradas. A estas alturas de la materia y la carrera ya debes sabes que el Diagrama de Secuencia asociado con un Caso de Uso debe involucrar las Clases relacionadas con el Caso de Uso.
+
+Gerardo Tordoya: Sí Profe, me imagino que sí, pero me resulta nuevo (porque al examen lo miré y remiré varias veces, de haber sabido eso, lo habría tenido en cuenta). Voy a ponerme a leer sobre el tema porque sigo sin entender a qué se refiere con eso de "clases relacionadas". En un primer momento pensé que se refería al Diagrama de Clases, pero son dos mundos distintos.
+
+Leonel Jiménez Gamboa: Tu estás en el equipo de Rolando ?
+
+Gerardo Tordoya: Sí profe. Soy Tordoya.
+
+Leonel Jiménez Gamboa: Dile que te enseñe los Diagramas de Secuencia que ella hizo en el parcial
+
+Gerardo Tordoya: Regio. Gracias. Cualquier cosa, le consulto. Que tenga buenas noches.
+
+Leonel Jiménez Gamboa: Ok

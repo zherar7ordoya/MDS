@@ -1,0 +1,58 @@
+@startuml Parcial 2 MDS2
+class Usuario {
+  - nombre: String
+  - nacionalidad: String
+  - direccionPostal: String
+  - email: String
+  - numeroPasaporte: String
+  + RegistrarUsuario()
+}
+
+abstract class Tarjeta {
+  - nivel: String
+  + calcularMillas(viaje: Viaje): int
+  + calcularMillasAdicionales(viaje: Viaje): int
+}
+
+class TarjetaPlata {
+  + calcularMillas(viaje: Viaje): int
+  + calcularMillasAdicionales(viaje: Viaje): int
+}
+
+class TarjetaOro {
+  + calcularMillas(viaje: Viaje): int
+  + calcularMillasAdicionales(viaje: Viaje): int
+}
+
+class Viaje {
+  - origen: String
+  - destino: String
+  - numeroVuelo: String
+  - fecha: Date
+  - millasVoladas: int
+  + calcularMillas(): int
+}
+
+class Premio {
+  - fecha: Date
+  - premioElegido: String
+  - puntos: int
+  + CobrarPremio()
+}
+
+class Resumen {
+  - fechaEmision: Date
+  - millasAcumuladas: int
+  - millasCambiadas: int
+  - millasAVencer: int
+  + EmitirResumen()
+}
+
+Usuario "1" -- "1" Tarjeta
+Usuario "1" -- "*" Viaje
+Usuario "1" -- "*" Premio
+Usuario "1" -- "1" Resumen
+
+Tarjeta <|-- TarjetaPlata
+Tarjeta <|-- TarjetaOro
+@enduml

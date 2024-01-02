@@ -1,0 +1,7 @@
+Itinerario 14: Segundo parcial
+
+En este encuentro, realizaremos el primer parcial, para ello le proponemos un modelo examen que le permita alcanzar los siguientes resultados de aprendizaje:
+
+[Diseña]+ [El sistema informático] + [Para representar la estructura estática y el comportamiento dinámico] + [Aplicando un Proceso de desarrollo] / [integrando todas las vistas de modelado] / [Aplicando el estándar UML]
+[Resuelve]+ [en posibles situaciones de conflicto]+ [para consensuar ideas comunes] +[considerando las características de cada participando del grupo]
+[Elabora] + [Informes técnicos]+ [para comunicar sus producciones] + [considerando la legibilidad y organización de la información]

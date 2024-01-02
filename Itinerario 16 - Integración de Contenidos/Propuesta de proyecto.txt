@@ -1,0 +1,21 @@
+Para: Todos los miembros del curso
+Leonel Jimenez Gamboa
+2023-07-19
+
+Saludos.
+Anexo les envio un documento modelo que sirve de guía para que vayan armando una propuesta de proyecto Individual para el Proyecto de Grado que seguro van a desarrollar en los proximos cuatrimestres. Lo vamos discutir en la próxima clase.
+
+Recordar que el proximo sábado es la clase de cierre. En esta clase terminaremos de revisar los trabajos que aun tengan puntos de desarrollo pendientes.
+
+Recordar que la evaluación final se basará en la evaluación integral de la carpeta de TP, por lo cual para esa fecha deben tener totalmente depurada dicha carpeta. Para este fin deben tomar en cuenta aspectos tales como:
+
+_ Seguir la secuencia y estructura del Proyecto dada en la carpeta modelo que se encuentra en la clase 1.
+_ Cumplir con todos los puntos del Proyecto.
+_ Mantener el Equilibrio y Balance entre los Diagramas UML descritos en su proyecto. Por ejemplo:
+
+	*) El numero de Procesos del Diagrama de Proceso del RFN deben estar en Equilibrio con el numero de Casos de Uso definidos para ese RFN.
+	*) El número de Datastore del Diagrama de Proceso de un RFN debe estar en Equilibrio con el numero de clases definidas en el modelo conceptual para el mismo RFN.
+	*) El numero de clases descritas en en un Diagrama de Secuencia asociado con un Caso Uso debe estar en equilibrio con el numero de clases descritas en el diagrama de clases asociado con ese diagrama de secuencia.
+	*) Etc, etc, etc, etc, que deben tomar en cuenta, entre tantos.
+
+Saludos.

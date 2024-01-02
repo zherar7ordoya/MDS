@@ -1,0 +1,3 @@
+PROFESOR LIONEL GAMBOA
+
+Aqui tienen un Proyecto que puede servir como modelo. Este trabajo en particular exagera el detalle, pero está bueno porque les enseña la secuencia de pasos y actividades que tiene un proyecto mas completo. Complementen los contenidos revisando el video de hoy (2023-06-03). No quiere decir que el ejemplo esté completamente bien, pero les puede dar ideas, y así ven la complejidad y la totalidad. Ustedes no deben hacerlo por capas, o sea, no hay diseño basado en Arquitectura de Capas.

@@ -1,0 +1,48 @@
+@startuml Parcial 2 MDS2 2023
+
+' En el Modelo Entidad-Relación, se utilizan las entidades "Usuario", "Tarjeta",
+' "Viaje", "Premio" y "Resumen". Cada entidad se representa como una tabla, y
+' los atributos se convierten en columnas de las tablas. Las relaciones entre
+' las entidades se muestran a través de las líneas entre ellas.
+
+skinparam linetype ortho
+hide circle
+
+entity Usuario {
+  + nombre: String
+  + nacionalidad: String
+  + direccionPostal: String
+  + email: String
+  + numeroPasaporte: String
+}
+
+entity Tarjeta {
+  + nivel: String
+}
+
+entity Viaje {
+  + origen: String
+  + destino: String
+  + numeroVuelo: String
+  + fecha: Date
+  + millasVoladas: int
+}
+
+entity Premio {
+  + fecha: Date
+  + premioElegido: String
+  + puntos: int
+}
+
+entity Resumen {
+  + fechaEmision: Date
+  + millasAcumuladas: int
+  + millasCambiadas: int
+  + millasAVencer: int
+}
+
+Usuario -left-o{ Tarjeta
+Usuario --o{ Viaje
+Usuario --o{ Premio
+Usuario -right-o{ Resumen
+@enduml

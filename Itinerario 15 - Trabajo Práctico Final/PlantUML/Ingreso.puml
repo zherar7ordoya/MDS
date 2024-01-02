@@ -1,0 +1,19 @@
+@startuml
+
+class Usuario {
+  + dni: string
+  + nombre: string
+  + apellido: string
+  + fechaNacimiento: Date
+  + email: string
+  + usuario: string
+  + contraseña: string
+}
+
+class Ingreso {
+  + realizarIngreso(usuario: string, contraseña: string): boolean
+}
+
+Usuario "1" -- "1" Ingreso
+
+@enduml

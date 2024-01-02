@@ -1,0 +1,10 @@
+
+
+
+
+
+
+
+Para el Requerimiento Funcional 1 (Gestión de Ventas y Facturación de Servicios de Transporte) necesito que hagas: Diagrama Entidad-Relación
+
+Para el Requerimiento Funcional 2 (Gestión de Logística y Registro de Operaciones de Transporte) necesito que hagas: Diagrama Entidad-Relación

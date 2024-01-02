@@ -1,0 +1,21 @@
+@startuml XXX
+start
+:Iniciar Carga Viaje;
+if (¿Es tarjeta de Nivel Oro?) then (Sí)
+  :Duplicar millas;
+endif
+:Calcular millas base;
+if (Viaje de más de 10,000 millas?) then (Sí)
+  :Sumar millas adicionales para tarjeta plata;
+  if (Viaje dentro del país?) then (Sí)
+    :Sumar millas adicionales para tarjeta oro;
+  endif
+else (No)
+  if (Viaje dentro del país?) then (Sí)
+    :Sumar millas adicionales para tarjeta oro;
+  endif
+endif
+:Actualizar millas acumuladas;
+:Mostrar confirmación de carga exitosa;
+stop
+@enduml

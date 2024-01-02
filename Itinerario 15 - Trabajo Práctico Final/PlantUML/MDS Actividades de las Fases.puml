@@ -1,0 +1,47 @@
+
+@startmindmap UML y Patrones (Craig Larman)
+
+' skin rose
+skinparam classFontName Calibri
+' skinparam shadowing false
+' hide circle
+' skinparam linetype ortho
+
+title Actividades de las Fases
+
+* <b>Metodología</b>
+
+    ** Planeación y\nElaboración
+        *** 1. Definir el plan preliminar
+        *** 2. Elaborar el informe preliminar de investigacion
+        *** 3. Definir los requerimientos
+        *** 4. Registrar los términos en el glosario
+        *** 5. Implementar el prototipo
+        *** 6. Definir los casos de uso (de alto nivel y esenciales)
+        *** 7. Definir el modelo conceptual preliminar
+        *** 8. Definir la arquitectura preliminar del sistema
+        *** 9. Perfeccionar el plan
+
+    ** Construcción
+        *** Ciclo de Desarrollo 1
+            **** Perfeccionar el plan
+            **** Sincronización de artefactos
+            **** Análisis
+                ***** 1. Definir los casos esenciales de uso
+                ***** 2. Perfeccionar los diagramas de casos de uso
+                ***** 3. Perfeccionar el modelo conceptual
+                ***** 4. Perfeccionar el glosario
+                ***** 5. Definir los diagramas de secuencia de los sistemas
+                ***** 6. Definir los contratos de operaciones
+                ***** 7. Definir los diagramas de estados
+            **** Diseño
+            **** Construcción
+            **** Pruebas
+
+        *** Ciclo de Desarrollo 2
+        *** Ciclo de Desarrollo 3
+
+    ** Aplicación
+        *** To apply\nstucture to ideas    
+
+@endmindmap

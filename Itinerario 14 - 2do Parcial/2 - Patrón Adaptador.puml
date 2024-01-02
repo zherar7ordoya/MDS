@@ -1,0 +1,27 @@
+@startuml Parcial 2 MDS2 2023
+interface Objetivo {
+    + metodoEsperado()
+}
+
+class ClaseExistente {
+    + metodoIncompatible()
+}
+
+class Adaptador {
+    - claseExistente: ClaseExistente
+
+    + Adaptador(claseExistente: ClaseExistente)
+    + metodoEsperado()
+}
+
+class Cliente {
+    - objetivo: Objetivo
+
+    + Cliente(objetivo: Objetivo)
+    + operacion()
+}
+
+Objetivo <|.. Adaptador
+Cliente --> Objetivo
+Adaptador --> ClaseExistente
+@enduml

@@ -1,0 +1,55 @@
+@startuml UML y Patrones (Craig Larman)
+
+' skin rose
+skinparam classFontName Calibri
+' skinparam shadowing false
+hide circle
+' skinparam linetype ortho
+
+title Dependencias de los Artefactos
+
+class "Informe\nPreliminar de\nInvestigación"
+
+class Prototipos
+
+class "Presupuesto\ny Programa"
+
+class "Especificaciones\nde Requerimientos"
+
+class "Casos de Uso"
+{
+    +Todos de alto nivel
+    +Algunos esenciales expandidos
+}
+
+class "Diagramas de\nCasos de Uso"
+
+class "Modelo\nConceptual\nPreliminar"
+
+class Glosario
+
+
+hide members
+show "Casos de Uso" fields
+
+
+"Informe\nPreliminar de\nInvestigación" <-- "Especificaciones\nde Requerimientos"
+
+Prototipos <-- "Especificaciones\nde Requerimientos"
+Prototipos <-- "Casos de Uso"
+
+"Presupuesto\ny Programa" --> "Especificaciones\nde Requerimientos"
+"Presupuesto\ny Programa" --> "Casos de Uso"
+"Presupuesto\ny Programa" --> "Modelo\nConceptual\nPreliminar"
+
+"Especificaciones\nde Requerimientos" <-- "Casos de Uso"
+"Casos de Uso" <-- "Diagramas de\nCasos de Uso"
+
+"Modelo\nConceptual\nPreliminar" --> "Casos de Uso"
+"Modelo\nConceptual\nPreliminar" --> "Especificaciones\nde Requerimientos"
+
+Glosario -> "Casos de Uso"
+Glosario -> "Especificaciones\nde Requerimientos"
+
+
+@enduml

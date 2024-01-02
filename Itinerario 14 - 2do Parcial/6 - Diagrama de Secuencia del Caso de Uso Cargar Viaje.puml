@@ -1,0 +1,27 @@
+@startuml Parcial 2 MDS2 2023
+
+' Explicación: El diagrama de secuencia muestra la interacción entre el actor
+' "Usuario" y el sistema durante el caso de uso "Cargar Viaje". El actor inicia
+' la carga del viaje y el sistema realiza una serie de acciones, como validar al
+' usuario, obtener información del viaje, calcular las millas, actualizar las
+' millas acumuladas y el nivel de la tarjeta. Finalmente, el sistema envía una
+' confirmación de carga exitosa al usuario.
+
+actor Usuario
+
+Usuario -> Sistema: Cargar Viaje
+activate Sistema
+Sistema -> Sistema: Validar usuario
+activate Sistema
+Sistema -> Sistema: Obtener información del viaje
+activate Sistema
+Sistema -> Sistema: Calcular millas
+activate Sistema
+Sistema -> Sistema: Actualizar millas acumuladas
+activate Sistema
+Sistema -> Sistema: Actualizar nivel de la tarjeta
+activate Sistema
+Sistema -> Usuario: Confirmación de carga exitosa
+activate Usuario
+
+@enduml

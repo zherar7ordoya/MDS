@@ -1,0 +1,242 @@
+**Requerimiento Funcional: Sistema de Mantenimiento Preventivo de Camiones**
+
+**Descripción:** Implementar un módulo de Mantenimiento Preventivo de Camiones en la aplicación de escritorio que permita realizar un seguimiento detallado del estado y las necesidades de mantenimiento de la flota de camiones utilizada para el transporte de contenedores.
+
+**Actores Principales:**
+
+1. Encargado de Logística: Es el actor responsable de coordinar y supervisar las operaciones logísticas, incluido el mantenimiento de la flota de camiones.
+
+2. Técnico de Mantenimiento: Es el encargado de llevar a cabo las tareas de mantenimiento programadas y resolver cualquier incidencia reportada en los camiones.
+
+**Diagrama de Procesos de Negocios (BPMN):**
+
+```
+(Encargado de Logística)        (Técnico de Mantenimiento)
+       |                                      |
+       |    1. Solicitar mantenimiento        |
+       |------------------------------------->|
+       |                                      |
+       |    2. Programar mantenimiento        |
+       |------------------------------------->|
+       |                                      |
+       |    3. Alertas de mantenimiento       |
+       |<-------------------------------------|
+       |                                      |
+       |    4. Realizar mantenimiento         |
+       |------------------------------------->|
+       |                                      |
+       |    5. Registrar mantenimiento        |
+       |<-------------------------------------|
+       |                                      |
+       |    6. Registro de incidencias        |
+       |------------------------------------->|
+       |                                      |
+       |    7. Informes de mantenimiento      |
+       |<-------------------------------------|
+```
+
+**Diagrama de ECS (Entrada-Comportamiento-Salida):**
+
+```
+Entrada                   Comportamiento                      Salida
+--------------------------------------------------------------------------------------
+1. Solicitud de           - Encargado de Logística           - Registro de solicitud
+mantenimiento.            solicita un mantenimiento          de mantenimiento en la
+                          preventivo para un camión.         base de datos.
+                          Ingresan datos de identificación,  - Programación del
+                          tipo de mantenimiento y fecha       mantenimiento.
+                          deseada.
+
+2. Programación           - El sistema programa el           - Notificación de
+de mantenimiento.         mantenimiento preventivo           mantenimiento al Técnico
+                          según las fechas                   de Mantenimiento.
+                          programadas. Se notifica
+                          al Técnico de Mantenimiento
+                          sobre los próximos
+                          mantenimientos a realizar.
+
+3. Alertas de             - El sistema envía alertas         - Notificación al
+mantenimiento.            al Encargado de Logística           Encargado de Logística
+                          y al Técnico de Mantenimiento      sobre las fechas de
+                          sobre las fechas de                mantenimiento programado.
+                          mantenimiento programado.
+
+4. Realización            - Técnico de Mantenimiento         - Registro de mantenimiento
+de mantenimiento.         realiza el mantenimiento           completado en la base de
+                          preventivo en el camión.           datos.
+
+5. Registro de            - Técnico de Mantenimiento         - Registro de incidencias
+incidencias.              registra cualquier incidencia      relacionadas con los
+                          o problema encontrado durante      mantenimientos en la
+                          el mantenimiento.                  base de datos.
+
+6. Informes de            - El sistema genera informes       - Informes de
+mantenimiento.            periódicos sobre el                mantenimiento con datos
+                          mantenimiento de la flota de       de mantenimientos
+                          camiones, incluyendo costos        realizados, costos, etc.
+                          y necesidades de mantenimiento.
+```
+
+**Modelo Conceptual:**
+
+- Camión: Representa un vehículo de transporte de contenedores, identificado por un número único.
+- Mantenimiento: Contiene la información relacionada con el mantenimiento preventivo realizado en un camión, incluyendo fecha, tipo de mantenimiento y detalles.
+- Incidencia: Almacena las incidencias reportadas durante el mantenimiento, con descripción y fecha.
+- Programación Mantenimiento: Guarda los registros de la programación de mantenimientos preventivos, con fecha y detalles.
+- Informe Mantenimiento: Almacena los datos utilizados para generar informes periódicos sobre el estado del mantenimiento de la flota de camiones.
+
+**Modelo de Dominio:**
+
+```
+                                +---------------+
+                                |   Camión      |
+                                +---------------+
+                                | ID            |
+                                | Descripción   |
+                                +---------------+
+                                        ^
+                                        |
+                        +---------------|---------------+
+                        |               |               |
+          +-------------|---+   +-------|--------+   +--|----------+
+          | Mantenimiento  |   | Programación |   | Incidencia |
+          +---------------+   +--------------+   +------------+
+          | ID            |   | ID           |
+
+   | ID         |
+          | Fecha         |   | Fecha        |   | Descripción|
+          | Tipo          |   | Detalles     |   | Fecha      |
+          | Detalles      |   +--------------+   +------------+
+          +---------------+
+                  ^
+                  |
+          +-------|-------+
+          | Informe Mant. |
+          +---------------+
+          | Datos         |
+          | Fechas        |
+          | Costos        |
+          +---------------+
+```
+
+**Diagrama de Clases:**
+
+```
++---------------+              +-------------------+
+|   Camión      |              |   Mantenimiento   |
++---------------+              +-------------------+
+| ID            |              | ID                |
+| Descripción   |              | Fecha             |
++---------------+              | Tipo              |
+        |                      | Detalles          |
+        |                      +-------------------+
+        |                                  ^
+        |                                  |
++-------|---------+            +-----------|---------+
+| Programación   |            | Incidencia          |
++---------------+            +-------------------+
+| ID            |            | ID                |
+| Fecha         |            | Descripción       |
+| Detalles      |            | Fecha             |
++---------------+            +-------------------+
+        ^
+        |
++-------|-------+
+| Informe Mant. |
++---------------+
+| Datos         |
+| Fechas        |
+| Costos        |
++---------------+
+```
+
+Este modelo conceptual, modelo de dominio y diagrama de clases representan las entidades y relaciones involucradas en el Sistema de Mantenimiento Preventivo de Camiones. La implementación de este módulo permitirá un seguimiento eficiente del estado y las necesidades de mantenimiento de la flota de camiones, mejorando la eficiencia operativa y la confiabilidad de los servicios de transporte de contenedores.
+
+
+
+***********
+
+
+**Diagrama de Casos de Uso:**
+
+```
++--------------------------------+
+|     Sistema de Mantenimiento    |
++--------------------------------+
+| - Registrar Mantenimiento       |
+| - Programar Mantenimiento       |
+| - Generar Informes             |
+| - Registrar Incidencia          |
++--------------------------------+
+```
+
+**Especificaciones de cada Caso de Uso:**
+
+**Caso de Uso: Registrar Mantenimiento**
+
+**Descripción:** Permite al Técnico de Mantenimiento registrar un nuevo mantenimiento preventivo realizado en un camión de la flota.
+
+**Actores Principales:** Técnico de Mantenimiento
+
+**Flujo Básico:**
+
+1. El Técnico de Mantenimiento selecciona la opción de "Registrar Mantenimiento" en la interfaz del sistema.
+2. El sistema muestra un formulario con campos para ingresar la información relevante del mantenimiento, como fecha, tipo de mantenimiento y detalles.
+3. El Técnico de Mantenimiento completa los campos del formulario con la información correspondiente.
+4. El Técnico de Mantenimiento confirma el registro del mantenimiento.
+5. El sistema valida y registra la información del mantenimiento en la base de datos.
+
+**Flujo Alternativo:**
+
+- Si algún campo del formulario no es válido, el sistema muestra un mensaje de error y solicita al Técnico de Mantenimiento que complete los campos obligatorios correctamente.
+
+**Caso de Uso: Programar Mantenimiento**
+
+**Descripción:** Permite al Encargado de Logística programar el mantenimiento preventivo para un camión de la flota.
+
+**Actores Principales:** Encargado de Logística
+
+**Flujo Básico:**
+
+1. El Encargado de Logística selecciona la opción de "Programar Mantenimiento" en la interfaz del sistema.
+2. El sistema muestra una lista de camiones disponibles para programar mantenimiento.
+3. El Encargado de Logística selecciona un camión de la lista.
+4. El sistema muestra un calendario con las fechas disponibles para programar el mantenimiento del camión seleccionado.
+5. El Encargado de Logística elige una fecha para el mantenimiento y confirma la programación.
+6. El sistema registra la programación del mantenimiento en la base de datos.
+
+**Flujo Alternativo:**
+
+- Si no hay camiones disponibles para programar mantenimiento en la fecha seleccionada, el sistema muestra un mensaje y solicita al Encargado de Logística que elija otra fecha.
+
+**Caso de Uso: Generar Informes**
+
+**Descripción:** Permite al Encargado de Logística generar informes periódicos sobre el estado del mantenimiento de la flota de camiones.
+
+**Actores Principales:** Encargado de Logística
+
+**Flujo Básico:**
+
+1. El Encargado de Logística selecciona la opción de "Generar Informes" en la interfaz del sistema.
+2. El sistema muestra un menú con las opciones de informes disponibles.
+3. El Encargado de Logística selecciona el tipo de informe que desea generar.
+4. El sistema procesa los datos y genera el informe solicitado.
+5. El informe se muestra en pantalla y el Encargado de Logística puede imprimirlo o guardarlo.
+
+**Caso de Uso: Registrar Incidencia**
+
+**Descripción:** Permite al Técnico de Mantenimiento registrar incidencias o problemas encontrados durante el mantenimiento preventivo de un camión.
+
+**Actores Principales:** Técnico de Mantenimiento
+
+**Flujo Básico:**
+
+1. El Técnico de Mantenimiento selecciona la opción de "Registrar Incidencia" en la interfaz del sistema.
+2. El sistema muestra un formulario con campos para ingresar la descripción y fecha de la incidencia.
+3. El Técnico de Mantenimiento completa los campos del formulario con la información de la incidencia.
+4. El Técnico de Mantenimiento confirma el registro de la incidencia.
+5. El sistema valida y registra la información de la incidencia en la base de datos.
+
+**Flujo Alternativo:**
+
+- Si la descripción de la incidencia es demasiado extensa, el sistema muestra un mensaje de advertencia y solicita al Técnico de Mantenimiento que reduzca la longitud de la descripción.

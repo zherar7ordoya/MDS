@@ -1,0 +1,24 @@
+@startuml
+
+class Usuario {
+  + dni: string
+  + nombre: string
+  + apellido: string
+  + fechaNacimiento: Date
+  + email: string
+  + usuario: string
+  + contraseña: string
+}
+
+class Registro {
+  + registrarUsuario(usuario: Usuario): boolean
+  + validarDNI(dni: string): boolean
+  + validarEmail(email: string): boolean
+  + validarFechaNacimiento(fechaNacimiento: Date): boolean
+  + validarUsuario(usuario: string): boolean
+  + validarContraseña(contraseña: string): boolean
+}
+
+Usuario "1" -- "1" Registro
+
+@enduml
