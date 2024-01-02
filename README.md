@@ -1,4 +1,4 @@
-# Teleinformática y Comunicaciones (Semeria)
+# Metodología de Desarrollo de Sistemas II (Jiménez Gamboa)
 
 UAI
 
